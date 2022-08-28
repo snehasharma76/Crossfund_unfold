@@ -1,0 +1,22 @@
+{
+  "private": true,
+  "name": "Crossfund",
+  "version": "1.0.0",
+  "repository": "git@github.com:allen-del/Crossfund.git",
+  "author": "Allen George Ajith <allen200118@gmail.com@gmail.com>",
+  "license": "MIT",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "yarn workspace @Crossfund/web dev",
+    "build:web": "yarn workspace @Crossfund/web run build",
+    "start": "yarn workspace @Crossfund/web run start",
+    "check-types": "yarn workspace @Crossfund/web tsc --pretty --noEmit",
+    "check-format": "yarn workspace @Crossfund/web prettier --check .",
+    "check-lint": "yarn workspace @Crossfund/web eslint . --ext ts --ext tsx --ext js",
+    "format": "yarn workspace @Crossfund/web prettier --write .",
+    "test": "yarn workspace @Crossfund/web jest",
+    "test-all": "yarn check-format && yarn check-lint && yarn check-types"
+  }
+}
